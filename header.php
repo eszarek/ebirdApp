@@ -9,7 +9,7 @@ ini_set('display_errors','1');
 
 //Include Files
 require_once "connect.php";
-require_once "functions.php";
+require_once "logic/functions.php";
 
 //Initial Variables
 //When using,  watch for capitalization of variable names.  Make changes as necessary.
@@ -41,43 +41,37 @@ if ($passlogout==1){
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<section class="intro">
-  <div id="hex">
-    <!-- PARTICLES -->
-    <canvas id="particles"></canvas>
-
-    <!-- HEXAGON GRID -->
-    <div id="hexagonGrid"></div>
-
-  </div>
+<section class="bird">
+    <div id="vanta-canvas"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
 
 </section>
 <div id="hello">
   <h1>Erinn Szarek</h1>
-  <h2>Cycle 1</h2>
+  <h2>Cycle 3</h2>
 </div>
 <nav>
 
   <?php
   echo "<ul>";
-  echo ($currentFile == "index.php") ? "<li><span class='navpage'>Home</span></li></li>" : "<li><a href='../index.php'>Home</a></li>";
+  echo ($currentFile == "index.php") ? "<li><span class='navpage'>Home</span></li></li>" : "<li><a href='index.php'>Home</a></li>";
+  echo "
+        <li class='nav-item dropdown show navpage'>
+        <a class='nav-link dropdown-toggle' href='#' role='button' id='dropdownMenuLink' data-bs-toggle='dropdown' 
+        aria-haspopup='true' aria-expanded='false'>All Species Views}</a>
+        <!-- dropdown items -->
+          <div class='dropdown-menu' aria-labelledby='dropdownMenuLink'>
+            <a class='dropdown-item' href='withByWithout.php?'>Species and photos</a>
+            <a class='dropdown-item' href='allSightings.php?'>All Species Seen</a>
+            <a class='dropdown-item' href='withPhotos.php?'>Species With photos</a>
+            <a class='dropdown-item' href='withoutPhotos.php'>Species Without photos</a>
 
-  if (isset($_SESSION['status']) ) {
-    echo ($currentFile == "allUserClass.php") ? "<li><span class='navpage'>My Classes</span></li>" : "<li><a href='allUserClass.php?q=$q'>My classes</a></li>";
-  }
+          </div>
+        </li>
+        ";
 
-  if (isset($_SESSION['status']) ) {
-    echo ($currentFile == "addUserClass.php") ? "<li><span class='navpage'>Add classes</span></li>" : "<li><a href='addUserClass.php?q=$q'>Add Classes</a></li>";
-  }
 
-  if (!isset($_SESSION['status']) ) {
-    echo ($currentFile == "register.php") ? "<li><span class='navpage'>Register</span></li>" : "<li><a href='../register.php'> Register</a></li>";
-  }
-
-  echo (isset($_SESSION['ID'])) ? "<li><a href='../login_out/logout.php'>Log out</a></li>" : "<li><a href='login.php'>Login</a></li>";
-  if (isset($_SESSION['status']) ) {
-    echo ($currentFile == "updatepassword.php") ? "<li><span class='navpage'>Update Password</span></li>" : "<li><a href='updatepassword.php?q=$q'> Update Password</a></li>";
-  }
   echo "</ul>";
   ?>
 
