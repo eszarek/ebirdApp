@@ -33,7 +33,7 @@
 
   <?php
   echo ($currentFile == "index.php") ? "<span class='navpage'>Home</span>" : "<a href='index.php'>Home</a>";
-  echo ($currentFile == "allClasses.php") ? "<span class='navpage'>My Classes</span>" : "<a href='Pages/allClasses.php'> My Classes</a>";
+  echo ($currentFile == "allSightings.php") ? "<span class='navpage'>My Classes</span>" : "<a href='allSightings.php'> My Classes</a>";
   ?>
 
 </nav>

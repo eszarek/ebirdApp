@@ -6,9 +6,9 @@ require_once "header.php";
 ?>
 <div class="welcome">
 
-      <h2>Stage 2</h2>
+      <h2>Stage 3</h2>
       <p>
-        EBird DB
+        EBird Database
       </p><br>
 
 
