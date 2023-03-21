@@ -1,23 +1,24 @@
 .bird, #vanta-canvas{
   animation: none !important;
+  background-color: black;
 
 }
 body {
   z-index: 2;
   position: relative;
-  background-color: black !important;
+  background-color: #f6f6f6 !important;
   width: 100%;
   min-height: 100vh;
 
-  color: white !important;
+  color: #000000 !important;
 
 }
 #hello{
 
-  color: white;
+  color: #ffffff;
 }
 .content{
-  background-color: black;
+  background-color: #ffffff;
 }
 section {
   z-index: -2;

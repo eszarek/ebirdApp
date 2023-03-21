@@ -21,7 +21,21 @@ function check_duplicates_per_user($pdo, $sql, $field, $uID) {
   return $row;
 }
 
+function findSpeciesCode($commonName){
+    $taxonomy =file_get_contents("logic/ebird forms.json");
+//$taxonomy = fopen("ebird forms.json", "r") or die ("Unable to open file");
+    $jsonTax = json_decode($taxonomy, true);
 
+    foreach ($jsonTax as $species) {
+        if ($species["COMMON_NAME"] == $commonName){
+            return $species["SPECIES_CODE"];
+
+        }
+
+
+    }
+
+}
 
 
 

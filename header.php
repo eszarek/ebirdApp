@@ -11,6 +11,7 @@ ini_set('display_errors','1');
 require_once "connect.php";
 require_once "logic/functions.php";
 
+
 //Initial Variables
 //When using,  watch for capitalization of variable names.  Make changes as necessary.
 $currentFile = basename($_SERVER['SCRIPT_FILENAME']);
@@ -35,8 +36,10 @@ if ($passlogout==1){
   <meta property="og:title" content="Erinn Szarek: Cycle 1">
 
   <link rel="stylesheet" href="css/normalize.css">
+    <script src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -49,13 +52,15 @@ if ($passlogout==1){
 </section>
 <div id="hello">
   <h1>Erinn Szarek</h1>
-  <h2>Cycle 3</h2>
+  <h2>Cycle 4</h2>
 </div>
 <nav>
 
   <?php
   echo "<ul>";
   echo ($currentFile == "index.php") ? "<li><span class='navpage'>Home</span></li></li>" : "<li><a href='index.php'>Home</a></li>";
+
+  echo ($currentFile == "needsPhotos.php") ? "<li><span class='navpage'>Species without Photos</span></li></li>" : "<li><a href='needsPhotos.php'>Species without Photos</a></li>";
   echo "
         <li class='nav-item dropdown show navpage'>
         <a class='nav-link dropdown-toggle' href='#' role='button' id='dropdownMenuLink' data-bs-toggle='dropdown' 

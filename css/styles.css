@@ -2,15 +2,16 @@
 
 nav, main{
   padding: 1em;
+  color: white;
 
 }
 body, main {
   z-index: 2;
   position: relative;
-  background-color: black !important;
+  background-color: #ffffff !important;
   width: 100%;
   min-height: 100vh;
-  color: white !important;
+  color: #000000 !important;
 
 }
 #hello{
@@ -18,8 +19,11 @@ body, main {
 
   pointer-events: none;
 }
-a{
-  color: white;
+nav a{
+  color: #ffffff;
+}
+a {
+  color: black;
 }
 nav {
   margin: 0 auto;
@@ -61,7 +65,7 @@ nav ul li a::after,
 .page-footer .container ul li a::after {
   display: inline-block;
   font-variation-settings: "wght" 900, "wdth" 75;
-  color: white;
+  color: #00ffd1;
 }
 nav ul li a::before,
 .page-footer ul li a::before {
@@ -70,6 +74,7 @@ nav ul li a::before,
 nav ul li a::after,
 .page-footer ul li a::after {
   content: "}";
+  color: #00ffd1;
 }
 
 nav ul li a {
@@ -89,7 +94,7 @@ th{
 
 
 .collapsible-section-header {
-  background-color: #101010;
+  background-color: #ffffff;
 }
 
 .collapsible-section-header a {
@@ -111,23 +116,23 @@ th{
 }
 
 tbody td {
-  background-color: #000000;
-  border-bottom: 1px solid #232323;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d0d0d0;
   padding: 1.25rem;
 }
 .card{
-  background-color: #1c1b1b;
+  background-color: #d9d9d9;
 display: revert;
 }
 .card-body{
-  background-color: #1c1b1b !important;
+  background-color: #c9c9c9 !important;
 }
 
 /* .tagtagtagButton */
 .tagButton {
   display: inline-block;
   padding: 0.67em;
-  outline-color: white;
+  outline-color: #000000;
 
 }
 .btn-danger{
